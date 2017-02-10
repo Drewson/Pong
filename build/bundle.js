@@ -476,9 +476,9 @@
 
 			this.board = new _Board2.default(this.width, this.height);
 
-			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2);
+			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2), _settings.KEYS.a, _settings.KEYS.z;
 
-			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2);
+			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2), _settings.KEYS.up, _settings.KEYS.down;
 		}
 
 		_createClass(Game, [{
@@ -594,7 +594,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Paddle = function () {
-	  function Paddle(boardHeight, width, height, x, y) {
+	  function Paddle(boardHeight, width, height, x, y, up, down) {
+	    var _this = this;
+
 	    _classCallCheck(this, Paddle);
 
 	    this.boardHeight = boardHeight;
@@ -608,60 +610,26 @@
 	    document.addEventListener('keydown', function (event) {
 	      switch (event.keyCode) {
 	        case up:
-	          console.log(_settings.KEYS.up);
+	          _this.up();
 	          break;
 	        case down:
-	          console.log('down');
-	          break;
-	      }
-	    });
-
-	    document.addEventListener('keydown', function (event) {
-	      switch (event.keyCode) {
-	        case up:
-	          console.log('up');
-	          break;
-	        case down:
-	          console.log('down');
-	          break;
-	      }
-	    });
-
-	    document.addEventListener('keydown', function (event) {
-	      switch (event.keyCode) {
-	        case up:
-	          console.log('up');
-	          break;
-	        case down:
-	          console.log('down');
-	          break;
-	      }
-	    });
-
-	    document.addEventListener('keydown', function (event) {
-	      switch (event.keyCode) {
-	        case up:
-	          console.log('up');
-	          break;
-	        case down:
-	          console.log('down');
-	          break;
-	      }
-	    });
-
-	    document.addEventListener('keydown', function (event) {
-	      switch (event.keyCode) {
-	        case up:
-	          console.log('up');
-	          break;
-	        case down:
-	          console.log('down');
+	          _this.down();
 	          break;
 	      }
 	    });
 	  }
 
 	  _createClass(Paddle, [{
+	    key: 'up',
+	    value: function up() {
+	      this.y = this.y - this.speed;
+	    }
+	  }, {
+	    key: 'down',
+	    value: function down() {
+	      this.y = this.y - this.speed;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render(svg) {
 

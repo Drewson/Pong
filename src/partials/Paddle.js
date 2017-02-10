@@ -1,10 +1,7 @@
-import {SVG_NS } from '../settings'
-import {KEYS} from '../settings'
-// import {paddle1} from './Game'
-// import {paddle2} from './Game'
+import { SVG_NS } from '../settings'
 
 export default class Paddle {
-  constructor(boardHeight, width, height, x, y) {
+  constructor(boardHeight, width, height, x, y, up, down) {
     this.boardHeight = boardHeight;
     this.width = width;
     this.height = height;
@@ -12,30 +9,29 @@ export default class Paddle {
     this.y = y;
     this.speed = 10;
     this.score = 0;
+    
 
     document.addEventListener('keydown', event => {
       switch (event.keyCode) {
-        case KEYS.up:
-          this.y -= this.speed;
+        case up:
+          this.up();
           break;
-        case KEYS.down:
-          this.y += this.speed;
-          break;
-      }
-          
-        switch (event.keyCode) {
-        case KEYS.z:
-          paddle2.y += this.speed;
-          break;
-        case KEYS.a:
-          paddle2.y -= this.speed;
+        case down:
+          this.down();
           break;
       }
-
     });
   }
+
+  up(){
+      this.y = Math.max(this.y - this.speed, 0);
+  }
+
+  down(){
+      this.y = Math.min(this.y + this.speed, (this.boardHeight- this.height));
+  }
   
-    render(svg) {
+render(svg) {
 
         let rect = document.createElementNS( SVG_NS, 'rect')
         rect.setAttributeNS(null, 'width', this.width)
