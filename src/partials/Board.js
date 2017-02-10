@@ -12,7 +12,7 @@ export default class Board {
       let rect = document.createElementNS( SVG_NS, 'rect')
       rect.setAttributeNS(null, 'width', this.width)
       rect.setAttributeNS(null, 'height', this.height)
-      rect.setAttributeNS(null, 'fill', 'green')
+      rect.setAttributeNS(null, 'fill', 'red')
       rect.setAttributeNS(null, 'x', '0')
       rect.setAttributeNS(null, 'y', '0')
 
