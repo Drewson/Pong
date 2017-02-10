@@ -11,7 +11,8 @@
     "no-eq-null": 0,
     "guard-for-in": 1,
     "no-empty": 1,
-    "quotes": [ 1, "single" ]
+    "quotes": [ 1, "single" ],
+    "no-mixed-spaces-and-tabs": 1
   },
   "env": {
     "browser": true
