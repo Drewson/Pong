@@ -76,7 +76,7 @@ export default class Game {
 
 		if (this.paddle1.score === 5 || this.paddle2.score === 5) {
 			let gg = document.createElementNS(SVG_NS, 'text')
-			gg.setAttributeNS(null, 'fill', 'red');
+			gg.setAttributeNS(null, 'fill', 'black');
 			gg.setAttributeNS(null, 'x', 100);
 			gg.setAttributeNS(null, 'y', 100);
 			gg.setAttributeNS(null, 'font-size', '50px');

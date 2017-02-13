@@ -1,4 +1,4 @@
-import {SVG_NS} from '../settings';
+import { SVG_NS } from '../settings';
 import Game from './Game';
 
 
@@ -9,6 +9,7 @@ export default class Ball {
         this.boardHeight = boardHeight;
         this.direction = 1;
         this.ping = new Audio('public/sounds/pong-01.wav');
+        this.pang = new Audio('public/sounds/pong-04.wav');
 
 
         this.reset();
@@ -91,48 +92,56 @@ export default class Ball {
         ball.setAttributeNS(null, 'r', this.radius)
         ball.setAttributeNS(null, 'cx', this.x)
         ball.setAttributeNS(null, 'cy', this.y)
-        ball.setAttributeNS(null, 'fill', 'white')
+        ball.setAttributeNS(null, 'fill', 'yellow')
 
         if (bomb) {
             ball.setAttributeNS(null, 'fill', 'red')
             ball.setAttributeNS(null, 'r', '20px')
+            ball.setAttributeNS(null, 'stroke', 'black')
+            ball.setAttributeNS(null, 'stroke-width', '25px')
         }
 
         svg.appendChild(ball);
         const rightGoal = this.x + this.radius >= this.boardWidth;
         const leftGoal = this.x - this.radius <= 0;
         if (rightGoal) {
+            this.direction = -this.direction;
             this.goal(paddle1);
-            this.direction = 1;
 
             if (bomb) {
+                this.pang.play()
+
                 let gg = document.createElementNS(SVG_NS, 'text')
 
-                gg.setAttributeNS(null, 'fill', 'red');
-                gg.setAttributeNS(null, 'x', 100);
-                gg.setAttributeNS(null, 'y', 100);
+                gg.setAttributeNS(null, 'fill', 'black');
+                gg.setAttributeNS(null, 'x', 40);
+                gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');
-                gg.setAttributeNS(null, 'kerning', '10');
+                gg.setAttributeNS(null, 'kerning', '5');
 
-                gg.innerHTML = 'GAME OVER!';
+                gg.innerHTML = 'PLAYER 2 WINS!';
                 svg.appendChild(gg);
+
                 Game.render(1);
             }
         } else if (leftGoal) {
+            this.direction = -this.direction;
             this.goal(paddle2);
-            this.direction = -1;
 
             if (bomb) {
+                this.pang.play()
+
                 let gg = document.createElementNS(SVG_NS, 'text')
 
-                gg.setAttributeNS(null, 'fill', 'red');
-                gg.setAttributeNS(null, 'x', 100);
-                gg.setAttributeNS(null, 'y', 100);
+                gg.setAttributeNS(null, 'fill', 'black');
+                gg.setAttributeNS(null, 'x', 40);
+                gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');
-                gg.setAttributeNS(null, 'kerning', '10');
+                gg.setAttributeNS(null, 'kerning', '5');
 
-                gg.innerHTML = 'GAME OVER!';
+                gg.innerHTML = 'PLAYER 1 WINS!';
                 svg.appendChild(gg);
+
                 Game.render(1);
             }
         }

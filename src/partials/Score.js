@@ -11,7 +11,7 @@ export default class Score {
 
         let score = document.createElementNS(SVG_NS, 'text')
 
-        score.setAttributeNS(null, 'fill', 'white');
+        score.setAttributeNS(null, 'fill', 'black');
         score.setAttributeNS(null, 'x', this.x);
         score.setAttributeNS(null, 'y', this.y);
         score.setAttributeNS(null, 'font-size', '30px');

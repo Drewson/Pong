@@ -30,11 +30,31 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  background-color:red;
+  background-color:#7DAB87;
 }
+
+
 ol, ul {
 	list-style: none;
+  display: block;
 }
+
+
+h2 {
+  text-decoration: underline;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#controls {
+  display: block;
+  margin: 20px;
+  padding: 10px 20px;
+  border: 2px inset black;
+  border-radius: 3px;
+  background-color: wheat;
+}
+
 blockquote, q {
 	quotes: none;
 }
