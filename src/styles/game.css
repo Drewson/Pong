@@ -36,23 +36,34 @@ body {
 
 ol, ul {
 	list-style: none;
-  display: block;
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  transition: height 1.5s, width 1s;
 }
 
 
 h2 {
   text-decoration: underline;
-  padding: 5px;
   font-size: 20px;
 }
 
 #controls {
+  /*height: 30px;*/
+  overflow: hidden;
   display: block;
   margin: 20px;
   padding: 10px 20px;
   border: 2px inset black;
   border-radius: 3px;
   background-color: wheat;
+}
+
+#controls :hover ~ ul{
+  visibility: visible;
+  height: 40px;
+  width: 330px;
+  padding: 10px;
 }
 
 blockquote, q {

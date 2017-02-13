@@ -97,7 +97,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:red;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:#7DAB87;\n}\n\n\nol, ul {\n\tlist-style: none;\n  display: block;\n}\n\n\nh2 {\n  text-decoration: underline;\n  padding: 5px;\n  font-size: 20px;\n}\n\n#controls {\n  height: 30px;\n  display: block;\n  margin: 20px;\n  padding: 10px 20px;\n  border: 2px inset black;\n  border-radius: 3px;\n  background-color: wheat;\n}\n\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -504,7 +504,7 @@
 						_this.pause = !_this.pause;
 						break;
 					case _settings.KEYS.shiftKey:
-						_this.newBall.render(svg, _this.paddle1, _this.paddle2, 1);
+						_this.bomb = !_this.bomb;
 
 				}
 			});
@@ -527,7 +527,7 @@
 
 				if (this.paddle1.score === 5 || this.paddle2.score === 5) {
 					var gg = document.createElementNS(_settings.SVG_NS, 'text');
-					gg.setAttributeNS(null, 'fill', 'red');
+					gg.setAttributeNS(null, 'fill', 'black');
 					gg.setAttributeNS(null, 'x', 100);
 					gg.setAttributeNS(null, 'y', 100);
 					gg.setAttributeNS(null, 'font-size', '50px');
@@ -544,6 +544,14 @@
 				}
 
 				this.ball.render(svg, this.paddle1, this.paddle2);
+
+				if (this.bomb) {
+					this.newBall.render(svg, this.paddle1, this.paddle2, 1);
+
+					if (this.newBall.destroy) {
+						return;
+					}
+				}
 
 				this.paddle1.render(svg);
 				this.paddle2.render(svg);
@@ -608,22 +616,73 @@
 	      var rect = document.createElementNS(_settings.SVG_NS, 'rect');
 	      rect.setAttributeNS(null, 'width', this.width);
 	      rect.setAttributeNS(null, 'height', this.height);
-	      rect.setAttributeNS(null, 'fill', 'black');
+	      rect.setAttributeNS(null, 'fill', '#B25C4E');
 	      rect.setAttributeNS(null, 'x', '0');
 	      rect.setAttributeNS(null, 'y', '0');
+	      rect.setAttributeNS(null, 'stroke', 'white');
+	      rect.setAttributeNS(null, 'stroke-width', '10');
 
 	      var line = document.createElementNS(_settings.SVG_NS, 'line');
 	      line.setAttributeNS(null, 'x1', this.width / 2);
 	      line.setAttributeNS(null, 'x2', this.width / 2);
 	      line.setAttributeNS(null, 'y1', '0');
 	      line.setAttributeNS(null, 'y2', this.height);
-	      line.setAttributeNS(null, 'width', '4');
-	      line.setAttributeNS(null, 'stroke', 'white');
-	      line.setAttributeNS(null, 'stroke-dasharray', '15, 10');
-	      line.setAttributeNS(null, 'stroke-width', '5');
+	      line.setAttributeNS(null, 'width', '7');
+	      line.setAttributeNS(null, 'stroke', 'silver');
+	      line.setAttributeNS(null, 'stroke-width', '7');
+
+	      var line2 = document.createElementNS(_settings.SVG_NS, 'line');
+	      line2.setAttributeNS(null, 'x1', 0);
+	      line2.setAttributeNS(null, 'x2', this.width);
+	      line2.setAttributeNS(null, 'y1', 20);
+	      line2.setAttributeNS(null, 'y2', 20);
+	      line2.setAttributeNS(null, 'width', '1');
+	      line2.setAttributeNS(null, 'stroke', 'white');
+	      line2.setAttributeNS(null, 'stroke-width', '3');
+
+	      var line3 = document.createElementNS(_settings.SVG_NS, 'line');
+	      line3.setAttributeNS(null, 'x1', 0);
+	      line3.setAttributeNS(null, 'x2', this.width);
+	      line3.setAttributeNS(null, 'y1', this.height - 20);
+	      line3.setAttributeNS(null, 'y2', this.height - 20);
+	      line3.setAttributeNS(null, 'width', '1');
+	      line3.setAttributeNS(null, 'stroke', 'white');
+	      line3.setAttributeNS(null, 'stroke-width', '3');
+
+	      var line4 = document.createElementNS(_settings.SVG_NS, 'line');
+	      line4.setAttributeNS(null, 'x1', this.width * .25);
+	      line4.setAttributeNS(null, 'x2', this.width * .75);
+	      line4.setAttributeNS(null, 'y1', this.height / 2);
+	      line4.setAttributeNS(null, 'y2', this.height / 2);
+	      line4.setAttributeNS(null, 'width', '1');
+	      line4.setAttributeNS(null, 'stroke', 'white');
+	      line4.setAttributeNS(null, 'stroke-width', '3');
+
+	      var line5 = document.createElementNS(_settings.SVG_NS, 'line');
+	      line5.setAttributeNS(null, 'x1', this.width * .25);
+	      line5.setAttributeNS(null, 'x2', this.width * .25);
+	      line5.setAttributeNS(null, 'y1', 20);
+	      line5.setAttributeNS(null, 'y2', this.height - 20);
+	      line5.setAttributeNS(null, 'width', '1');
+	      line5.setAttributeNS(null, 'stroke', 'white');
+	      line5.setAttributeNS(null, 'stroke-width', '3');
+
+	      var line6 = document.createElementNS(_settings.SVG_NS, 'line');
+	      line6.setAttributeNS(null, 'x1', this.width * .75);
+	      line6.setAttributeNS(null, 'x2', this.width * .75);
+	      line6.setAttributeNS(null, 'y1', 20);
+	      line6.setAttributeNS(null, 'y2', this.height - 20);
+	      line6.setAttributeNS(null, 'width', '1');
+	      line6.setAttributeNS(null, 'stroke', 'white');
+	      line6.setAttributeNS(null, 'stroke-width', '3');
 
 	      svg.appendChild(rect);
 	      svg.appendChild(line);
+	      svg.appendChild(line2);
+	      svg.appendChild(line3);
+	      svg.appendChild(line4);
+	      svg.appendChild(line5);
+	      svg.appendChild(line6);
 	    }
 	  }]);
 
@@ -702,7 +761,9 @@
 	            rect.setAttributeNS(null, 'height', this.height);
 	            rect.setAttributeNS(null, 'x', this.x);
 	            rect.setAttributeNS(null, 'y', this.y);
-	            rect.setAttributeNS(null, 'fill', 'white');
+	            rect.setAttributeNS(null, 'fill', 'black');
+	            rect.setAttributeNS(null, 'stroke', 'black');
+	            rect.setAttributeNS(null, 'stroke-width', '3');
 	            svg.appendChild(rect);
 	        }
 	    }]);
@@ -745,6 +806,7 @@
 	        this.boardHeight = boardHeight;
 	        this.direction = 1;
 	        this.ping = new Audio('public/sounds/pong-01.wav');
+	        this.pang = new Audio('public/sounds/pong-04.wav');
 
 	        this.reset();
 	    }
@@ -830,48 +892,56 @@
 	            ball.setAttributeNS(null, 'r', this.radius);
 	            ball.setAttributeNS(null, 'cx', this.x);
 	            ball.setAttributeNS(null, 'cy', this.y);
-	            ball.setAttributeNS(null, 'fill', 'white');
+	            ball.setAttributeNS(null, 'fill', 'yellow');
 
 	            if (bomb) {
 	                ball.setAttributeNS(null, 'fill', 'red');
 	                ball.setAttributeNS(null, 'r', '20px');
+	                ball.setAttributeNS(null, 'stroke', 'black');
+	                ball.setAttributeNS(null, 'stroke-width', '25px');
 	            }
 
 	            svg.appendChild(ball);
 	            var rightGoal = this.x + this.radius >= this.boardWidth;
 	            var leftGoal = this.x - this.radius <= 0;
 	            if (rightGoal) {
+	                this.direction = -this.direction;
 	                this.goal(paddle1);
-	                this.direction = 1;
 
 	                if (bomb) {
+	                    this.pang.play();
+
 	                    var gg = document.createElementNS(_settings.SVG_NS, 'text');
 
-	                    gg.setAttributeNS(null, 'fill', 'red');
-	                    gg.setAttributeNS(null, 'x', 100);
-	                    gg.setAttributeNS(null, 'y', 100);
+	                    gg.setAttributeNS(null, 'fill', 'black');
+	                    gg.setAttributeNS(null, 'x', 40);
+	                    gg.setAttributeNS(null, 'y', 120);
 	                    gg.setAttributeNS(null, 'font-size', '50px');
-	                    gg.setAttributeNS(null, 'kerning', '10');
+	                    gg.setAttributeNS(null, 'kerning', '5');
 
-	                    gg.innerHTML = 'GAME OVER!';
+	                    gg.innerHTML = 'PLAYER 2 WINS!';
 	                    svg.appendChild(gg);
+
 	                    _Game2.default.render(1);
 	                }
 	            } else if (leftGoal) {
+	                this.direction = -this.direction;
 	                this.goal(paddle2);
-	                this.direction = -1;
 
 	                if (bomb) {
+	                    this.pang.play();
+
 	                    var _gg = document.createElementNS(_settings.SVG_NS, 'text');
 
-	                    _gg.setAttributeNS(null, 'fill', 'red');
-	                    _gg.setAttributeNS(null, 'x', 100);
-	                    _gg.setAttributeNS(null, 'y', 100);
+	                    _gg.setAttributeNS(null, 'fill', 'black');
+	                    _gg.setAttributeNS(null, 'x', 40);
+	                    _gg.setAttributeNS(null, 'y', 120);
 	                    _gg.setAttributeNS(null, 'font-size', '50px');
-	                    _gg.setAttributeNS(null, 'kerning', '10');
+	                    _gg.setAttributeNS(null, 'kerning', '5');
 
-	                    _gg.innerHTML = 'GAME OVER!';
+	                    _gg.innerHTML = 'PLAYER 1 WINS!';
 	                    svg.appendChild(_gg);
+
 	                    _Game2.default.render(1);
 	                }
 	            }
@@ -914,7 +984,7 @@
 
 	            var score = document.createElementNS(_settings.SVG_NS, 'text');
 
-	            score.setAttributeNS(null, 'fill', 'white');
+	            score.setAttributeNS(null, 'fill', 'black');
 	            score.setAttributeNS(null, 'x', this.x);
 	            score.setAttributeNS(null, 'y', this.y);
 	            score.setAttributeNS(null, 'font-size', '30px');

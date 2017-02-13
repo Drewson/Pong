@@ -95,10 +95,11 @@ export default class Ball {
         ball.setAttributeNS(null, 'fill', 'yellow')
 
         if (bomb) {
-            ball.setAttributeNS(null, 'fill', 'red')
+            ball.setAttributeNS(null, 'fill', 'black')
             ball.setAttributeNS(null, 'r', '20px')
-            ball.setAttributeNS(null, 'stroke', 'black')
+            ball.setAttributeNS(null, 'stroke', 'red')
             ball.setAttributeNS(null, 'stroke-width', '25px')
+            ball.setAttributeNS(null, 'stroke-opacity', '.5')
         }
 
         svg.appendChild(ball);
