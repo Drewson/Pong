@@ -35,6 +35,8 @@ It makes pong quite a bit more intense.
 
 -I redeisgned the pong game to look like a tennis court.
 
+-Added difficulty settings, by giving the ability to increase and decrease ballspeed 
+
 
 ## What I learned
 

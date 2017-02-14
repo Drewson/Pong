@@ -130,6 +130,9 @@ export default class Ball {
                 let gg = document.createElementNS(SVG_NS, 'text')
 
                 gg.setAttributeNS(null, 'fill', 'yellow');
+                gg.setAttributeNS(null, 'stroke', 'black')
+                gg.setAttributeNS(null, 'stroke-width', '5px')
+                gg.setAttributeNS(null, 'stroke-opacity', .25)
                 gg.setAttributeNS(null, 'x', 40);
                 gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');
@@ -150,6 +153,9 @@ export default class Ball {
                 let gg = document.createElementNS(SVG_NS, 'text')
 
                 gg.setAttributeNS(null, 'fill', 'yellow');
+                gg.setAttributeNS(null, 'stroke', 'black')
+                gg.setAttributeNS(null, 'stroke-width', '5px')
+                gg.setAttributeNS(null, 'stroke-opacity', .25)
                 gg.setAttributeNS(null, 'x', 40);
                 gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');

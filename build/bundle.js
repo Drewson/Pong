@@ -97,7 +97,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:#7DAB87;\n}\n\n\nol, ul {\n\tlist-style: none;\n  visibility: hidden;\n  height: 0px;\n  width: 0px;\n  transition: height 1.5s, width 1s;\n}\n\n\nh2 {\n  text-decoration: underline;\n  font-size: 20px;\n}\n\n#controls {\n  /*height: 30px;*/\n  overflow: hidden;\n  display: block;\n  margin: 20px;\n  padding: 10px 20px;\n  border: 2px inset black;\n  border-radius: 3px;\n  background-color: wheat;\n}\n\n#controls :hover ~ ul{\n  visibility: visible;\n  height: 40px;\n  width: 330px;\n  padding: 10px;\n}\n\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:#7DAB87;\n}\n\n\nol, ul {\n\tlist-style: none;\n  visibility: hidden;\n  height: 0px;\n  width: 0px;\n  transition: height 1.5s, width 1s;\n}\n\n\nh2 {\n  text-decoration: underline;\n  font-size: 20px;\n}\n\n#controls {\n  /*height: 30px;*/\n  overflow: hidden;\n  display: block;\n  margin: 20px;\n  padding: 5px 5px;\n  border: 2px inset black;\n  border-radius: 3px;\n  background-color: wheat;\n}\n\n#controls :hover ~ ul{\n  visibility: visible;\n  height: 70px;\n  width: 330px;\n  padding: 10px;\n}\n\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -483,16 +483,16 @@
 			this.gameElement = document.getElementById(this.element);
 
 			this.boardGap = 10;
-			this.paddleWidth = 8;
+			this.paddleWidth = 12;
 			this.paddleHeight = 56;
 
 			this.board = new _Board2.default(this.width, this.height);
 
-			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.a, _settings.KEYS.z, _settings.KEYS.left, _settings.KEYS.right);
+			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.a, _settings.KEYS.z);
 
-			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down, _settings.KEYS.left, _settings.KEYS.right);
+			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down);
 
-			this.ball = new _Ball2.default(8, this.width, this.height);
+			this.ball = new _Ball2.default(8, this.width, this.height, _settings.KEYS.plus, _settings.KEYS.minus);
 			this.newBall = new _Ball2.default(8, this.width, this.height);
 
 			this.score1 = new _Score2.default(this.width / 2 - 70, 30, 30);
@@ -527,10 +527,10 @@
 
 				if (this.paddle1.score === 5 || this.paddle2.score === 5) {
 					var gg = document.createElementNS(_settings.SVG_NS, 'text');
-					gg.setAttributeNS(null, 'fill', 'black');
-					gg.setAttributeNS(null, 'x', 100);
-					gg.setAttributeNS(null, 'y', 100);
-					gg.setAttributeNS(null, 'font-size', '50px');
+					gg.setAttributeNS(null, 'fill', 'yellow');
+					gg.setAttributeNS(null, 'x', 10);
+					gg.setAttributeNS(null, 'y', 150);
+					gg.setAttributeNS(null, 'font-size', '80px');
 					gg.setAttributeNS(null, 'kerning', '10');
 
 					gg.innerHTML = 'GAME OVER!';
@@ -581,6 +581,8 @@
 	  z: 90,
 	  up: 38,
 	  down: 40,
+	  plus: 187,
+	  minus: 189,
 	  spaceBar: 32,
 	  shiftKey: 16
 	};
@@ -708,7 +710,7 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Paddle = function () {
-	    function Paddle(boardHeight, width, height, x, y, up, down, left, right) {
+	    function Paddle(boardHeight, width, height, x, y, up, down) {
 	        var _this = this;
 
 	        _classCallCheck(this, Paddle);
@@ -729,11 +731,6 @@
 	                case down:
 	                    _this.down();
 	                    break;
-	                case left:
-	                    _this.left();
-	                    break;
-	                case right:
-	                    _this.right();
 	            }
 	        });
 	    }
@@ -747,16 +744,6 @@
 	        key: 'down',
 	        value: function down() {
 	            this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
-	        }
-	    }, {
-	        key: 'left',
-	        value: function left() {
-	            this.x = Math.min(this.x + this.speed, this.boardHeight - this.width);
-	        }
-	    }, {
-	        key: 'right',
-	        value: function right() {
-	            this.x = Math.min(this.x - this.speed, 0);
 	        }
 	    }, {
 	        key: 'coordinates',
@@ -776,9 +763,9 @@
 	            rect.setAttributeNS(null, 'height', this.height);
 	            rect.setAttributeNS(null, 'x', this.x);
 	            rect.setAttributeNS(null, 'y', this.y);
-	            rect.setAttributeNS(null, 'fill', 'black');
+	            rect.setAttributeNS(null, 'fill', '#275880');
 	            rect.setAttributeNS(null, 'stroke', 'black');
-	            rect.setAttributeNS(null, 'stroke-width', '3');
+	            rect.setAttributeNS(null, 'stroke-width', '1');
 	            svg.appendChild(rect);
 	        }
 	    }]);
@@ -813,7 +800,9 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Ball = function () {
-	    function Ball(radius, boardWidth, boardHeight) {
+	    function Ball(radius, boardWidth, boardHeight, plus, minus) {
+	        var _this = this;
+
 	        _classCallCheck(this, Ball);
 
 	        this.radius = radius;
@@ -822,8 +811,22 @@
 	        this.direction = 1;
 	        this.ping = new Audio('public/sounds/pong-01.wav');
 	        this.pang = new Audio('public/sounds/pong-04.wav');
+	        this.ballSpeed = 6;
+	        this.plus = plus;
+	        this.minus = minus;
 
 	        this.reset();
+
+	        document.addEventListener('keydown', function (event) {
+	            switch (event.keyCode) {
+	                case plus:
+	                    _this.ballSpeed++;
+	                    break;
+	                case minus:
+	                    _this.ballSpeed--;
+	                    break;
+	            }
+	        });
 	    }
 
 	    _createClass(Ball, [{
@@ -884,7 +887,7 @@
 	                this.vy = Math.floor(Math.random() * 10 - 5);
 	            }
 
-	            this.vx = this.direction * (6 - Math.abs(this.vy));
+	            this.vx = this.direction * (this.ballSpeed - Math.abs(this.vy));
 	        }
 	    }, {
 	        key: 'goal',
@@ -908,12 +911,14 @@
 	            ball.setAttributeNS(null, 'cx', this.x);
 	            ball.setAttributeNS(null, 'cy', this.y);
 	            ball.setAttributeNS(null, 'fill', 'yellow');
+	            ball.setAttributeNS(null, 'stroke', 'black');
+	            ball.setAttributeNS(null, 'stroke-width', '1px');
 
 	            if (bomb) {
 	                ball.setAttributeNS(null, 'fill', 'black');
 	                ball.setAttributeNS(null, 'r', '20px');
 	                ball.setAttributeNS(null, 'stroke', 'red');
-	                ball.setAttributeNS(null, 'stroke-width', '25px');
+	                ball.setAttributeNS(null, 'stroke-width', '15px');
 	                ball.setAttributeNS(null, 'stroke-opacity', '.5');
 	            }
 
@@ -929,7 +934,10 @@
 
 	                    var gg = document.createElementNS(_settings.SVG_NS, 'text');
 
-	                    gg.setAttributeNS(null, 'fill', 'black');
+	                    gg.setAttributeNS(null, 'fill', 'yellow');
+	                    gg.setAttributeNS(null, 'stroke', 'black');
+	                    gg.setAttributeNS(null, 'stroke-width', '5px');
+	                    gg.setAttributeNS(null, 'stroke-opacity', .25);
 	                    gg.setAttributeNS(null, 'x', 40);
 	                    gg.setAttributeNS(null, 'y', 120);
 	                    gg.setAttributeNS(null, 'font-size', '50px');
@@ -949,7 +957,10 @@
 
 	                    var _gg = document.createElementNS(_settings.SVG_NS, 'text');
 
-	                    _gg.setAttributeNS(null, 'fill', 'black');
+	                    _gg.setAttributeNS(null, 'fill', 'yellow');
+	                    _gg.setAttributeNS(null, 'stroke', 'black');
+	                    _gg.setAttributeNS(null, 'stroke-width', '5px');
+	                    _gg.setAttributeNS(null, 'stroke-opacity', .25);
 	                    _gg.setAttributeNS(null, 'x', 40);
 	                    _gg.setAttributeNS(null, 'y', 120);
 	                    _gg.setAttributeNS(null, 'font-size', '50px');
@@ -1000,10 +1011,13 @@
 
 	            var score = document.createElementNS(_settings.SVG_NS, 'text');
 
-	            score.setAttributeNS(null, 'fill', 'black');
+	            score.setAttributeNS(null, 'fill', '#275880');
+	            score.setAttributeNS(null, 'stroke', 'black');
+	            score.setAttributeNS(null, 'stroke-width', '5px');
+	            score.setAttributeNS(null, 'stroke-opacity', .25);
 	            score.setAttributeNS(null, 'x', this.x);
-	            score.setAttributeNS(null, 'y', this.y);
-	            score.setAttributeNS(null, 'font-size', '30px');
+	            score.setAttributeNS(null, 'y', this.y + 10);
+	            score.setAttributeNS(null, 'font-size', '40px');
 	            score.setAttributeNS(null, 'kerning', '10');
 
 	            score.innerHTML = point;

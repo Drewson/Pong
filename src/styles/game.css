@@ -48,6 +48,10 @@ h2 {
   font-size: 20px;
 }
 
+#game {
+  box-shadow: 3px 7px 7px black;
+}
+
 #controls {
   /*height: 30px;*/
   overflow: hidden;
