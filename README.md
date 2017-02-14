@@ -48,6 +48,3 @@ it'll be great to take the boiler plate code to my next project.
 
 The fact that this project was basically all vanilla JavaScript really required
 me to learn programming in a way that could only be achieved by doing..
-
-I know I suck at README's but this isnt english class, so hopefully what 
-I've written hear is good enough! Somehow im not so sure it will be.

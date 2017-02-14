@@ -58,7 +58,7 @@ h2 {
   display: block;
   margin: 20px;
   padding: 5px 5px;
-  border: 2px inset black;
+  border: 2px outset black;
   border-radius: 3px;
   background-color: wheat;
 }
