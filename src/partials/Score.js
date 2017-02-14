@@ -13,8 +13,8 @@ export default class Score {
 
         score.setAttributeNS(null, 'fill', 'black');
         score.setAttributeNS(null, 'x', this.x);
-        score.setAttributeNS(null, 'y', this.y);
-        score.setAttributeNS(null, 'font-size', '30px');
+        score.setAttributeNS(null, 'y', this.y + 10);
+        score.setAttributeNS(null, 'font-size', '40px');
         score.setAttributeNS(null, 'kerning', '10');
 
 

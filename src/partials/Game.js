@@ -19,7 +19,7 @@ export default class Game {
 		this.gameElement = document.getElementById(this.element);
 
 		this.boardGap = 10;
-		this.paddleWidth = 8;
+		this.paddleWidth = 12;
 		this.paddleHeight = 56;
 
 
@@ -43,7 +43,7 @@ export default class Game {
 			KEYS.up,
 			KEYS.down);
 
-		this.ball = new Ball(8, this.width, this.height);
+		this.ball = new Ball(8, this.width, this.height, KEYS.plus, KEYS.minus);
 		this.newBall = new Ball(8, this.width, this.height);
 
 		this.score1 = new Score(this.width / 2 - 70, 30, 30);
@@ -76,10 +76,10 @@ export default class Game {
 
 		if (this.paddle1.score === 5 || this.paddle2.score === 5) {
 			let gg = document.createElementNS(SVG_NS, 'text')
-			gg.setAttributeNS(null, 'fill', 'black');
-			gg.setAttributeNS(null, 'x', 100);
-			gg.setAttributeNS(null, 'y', 100);
-			gg.setAttributeNS(null, 'font-size', '50px');
+			gg.setAttributeNS(null, 'fill', 'yellow');
+			gg.setAttributeNS(null, 'x', 10);
+			gg.setAttributeNS(null, 'y', 150);
+			gg.setAttributeNS(null, 'font-size', '80px');
 			gg.setAttributeNS(null, 'kerning', '10');
 
 			gg.innerHTML = 'GAME OVER!';
@@ -106,7 +106,7 @@ export default class Game {
 		this.paddle2.render(svg);
 		this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
-		
+
 
 	}
 }

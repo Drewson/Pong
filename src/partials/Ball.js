@@ -3,16 +3,29 @@ import Game from './Game';
 
 
 export default class Ball {
-    constructor(radius, boardWidth, boardHeight) {
+    constructor(radius, boardWidth, boardHeight, plus, minus) {
         this.radius = radius;
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
         this.direction = 1;
         this.ping = new Audio('public/sounds/pong-01.wav');
         this.pang = new Audio('public/sounds/pong-04.wav');
-
+        this.ballSpeed = 6;
+        this.plus = plus;
+        this.minus = minus;
 
         this.reset();
+
+        document.addEventListener('keydown', event => {
+            switch (event.keyCode) {
+                case plus:
+                    this.ballSpeed++;
+                    break;
+                case minus:
+                    this.ballSpeed--;
+                    break;
+            }
+        });
     }
 
     wallCollision() {
@@ -70,7 +83,7 @@ export default class Ball {
             this.vy = Math.floor(Math.random() * 10 - 5);
         }
 
-        this.vx = this.direction * (6 - Math.abs(this.vy));
+        this.vx = this.direction * (this.ballSpeed - Math.abs(this.vy));
     }
     goal(player) {
         player.score++;
@@ -93,12 +106,14 @@ export default class Ball {
         ball.setAttributeNS(null, 'cx', this.x)
         ball.setAttributeNS(null, 'cy', this.y)
         ball.setAttributeNS(null, 'fill', 'yellow')
+        ball.setAttributeNS(null, 'stroke', 'black')
+        ball.setAttributeNS(null, 'stroke-width', '1px')
 
         if (bomb) {
             ball.setAttributeNS(null, 'fill', 'black')
             ball.setAttributeNS(null, 'r', '20px')
             ball.setAttributeNS(null, 'stroke', 'red')
-            ball.setAttributeNS(null, 'stroke-width', '25px')
+            ball.setAttributeNS(null, 'stroke-width', '15px')
             ball.setAttributeNS(null, 'stroke-opacity', '.5')
         }
 
@@ -114,7 +129,7 @@ export default class Ball {
 
                 let gg = document.createElementNS(SVG_NS, 'text')
 
-                gg.setAttributeNS(null, 'fill', 'black');
+                gg.setAttributeNS(null, 'fill', 'yellow');
                 gg.setAttributeNS(null, 'x', 40);
                 gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');
@@ -134,7 +149,7 @@ export default class Ball {
 
                 let gg = document.createElementNS(SVG_NS, 'text')
 
-                gg.setAttributeNS(null, 'fill', 'black');
+                gg.setAttributeNS(null, 'fill', 'yellow');
                 gg.setAttributeNS(null, 'x', 40);
                 gg.setAttributeNS(null, 'y', 120);
                 gg.setAttributeNS(null, 'font-size', '50px');

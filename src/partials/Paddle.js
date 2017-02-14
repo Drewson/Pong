@@ -32,6 +32,7 @@ export default class Paddle {
     down() {
         this.y = Math.min(this.y + this.speed, (this.boardHeight - this.height));
     }
+
     coordinates(x, y, width, height) {
         let leftX = x;
         let rightX = x + width;
@@ -47,9 +48,9 @@ export default class Paddle {
         rect.setAttributeNS(null, 'height', this.height)
         rect.setAttributeNS(null, 'x', this.x)
         rect.setAttributeNS(null, 'y', this.y)
-        rect.setAttributeNS(null, 'fill', 'black')
+        rect.setAttributeNS(null, 'fill', '#275880')
         rect.setAttributeNS(null, 'stroke', 'black')
-        rect.setAttributeNS(null, 'stroke-width', '3')
+        rect.setAttributeNS(null, 'stroke-width', '1')
         svg.appendChild(rect)
     }
 }
