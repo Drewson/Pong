@@ -15,7 +15,7 @@ export default class Game {
 		this.width = width;
 		this.height = height;
 		this.pause = false;
-		this.bomb = 0;
+		this.bomb = false;
 		this.gameElement = document.getElementById(this.element);
 
 		this.boardGap = 10;
@@ -56,7 +56,7 @@ export default class Game {
 					this.pause = !this.pause;
 					break;
 				case KEYS.shiftKey:
-					this.bomb = !this.bomb;
+					this.bomb = true; 
 
 			}
 		});
@@ -100,9 +100,9 @@ export default class Game {
 		if (this.bomb) {
 			this.newBall.render(svg, this.paddle1, this.paddle2, 1);
 
-			if (this.newBall.destroy) {
-				return;
-			}
+			// if (this.newBall.destroy) {
+			// 	return;
+			// }
 		}
 
 		this.paddle1.render(svg);
