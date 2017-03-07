@@ -97,7 +97,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:#7DAB87;\n}\n\n\nol, ul {\n\tlist-style: none;\n  visibility: hidden;\n  height: 0px;\n  width: 0px;\n  transition: height 1.5s, width 1s;\n}\n\n\nh2 {\n  text-decoration: underline;\n  font-size: 20px;\n}\n\n#game {\n  box-shadow: 3px 7px 7px black;\n}\n\n#controls {\n  /*height: 30px;*/\n  overflow: hidden;\n  display: block;\n  margin: 20px;\n  padding: 5px 5px;\n  border: 2px outset black;\n  border-radius: 3px;\n  background-color: wheat;\n}\n\n#controls :hover ~ ul{\n  visibility: visible;\n  height: 70px;\n  width: 330px;\n  padding: 10px;\n}\n\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n  background-color:#7DAB87;\n}\n\n\nol, ul {\n\tlist-style: none;\n  visibility: hidden;\n  height: 0px;\n  width: 0px;\n  transition: height 1.5s, width 1s;\n}\n\n\nh2 {\n  text-decoration: underline;\n  font-size: 20px;\n}\n\n#game {\n  box-shadow: 3px 7px 7px black;\n}\n\n#controls {\n  /*height: 30px;*/\n  overflow: hidden;\n  display: block;\n  margin: 20px;\n  padding: 15px 5px;\n  border: 2px outset black;\n  border-radius: 3px;\n  background-color: wheat;\n}\n\n#controls :hover ~ ul{\n  visibility: visible;\n  height: 70px;\n  width: 330px;\n  padding: 10px;\n}\n\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(5) + ") format('woff'),\n    url(" + __webpack_require__(6) + ") format('truetype'),\n    url(" + __webpack_require__(7) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
 
 	// exports
 
@@ -488,15 +488,14 @@
 
 			this.board = new _Board2.default(this.width, this.height);
 
-			this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.a, _settings.KEYS.z);
+			this.paddle2();
+			this.paddle1();
 
-			this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down);
+			this.ball();
+			this.newBall();
 
-			this.ball = new _Ball2.default(8, this.width, this.height, _settings.KEYS.plus, _settings.KEYS.minus);
-			this.newBall = new _Ball2.default(8, this.width, this.height);
-
-			this.score1 = new _Score2.default(this.width / 2 - 70, 30, 30);
-			this.score2 = new _Score2.default(this.width / 2 + 50, 30, 30);
+			this.score1();
+			this.score2();
 
 			document.addEventListener('keydown', function (event) {
 				switch (event.keyCode) {
@@ -505,12 +504,50 @@
 						break;
 					case _settings.KEYS.shiftKey:
 						_this.bomb = true;
-
 				}
 			});
 		}
 
+		//PLAYER 1
+
+
 		_createClass(Game, [{
+			key: 'score1',
+			value: function score1() {
+				this.score1 = new _Score2.default(this.width / 2 - 70, 30, 30);
+			}
+
+			//PLAYER 2
+
+		}, {
+			key: 'score2',
+			value: function score2() {
+				this.score2 = new _Score2.default(this.width / 2 + 50, 30, 30);
+			}
+		}, {
+			key: 'ball',
+			value: function ball() {
+				this.ball = new _Ball2.default(8, this.width, this.height, _settings.KEYS.plus, _settings.KEYS.minus);
+			}
+
+			//BOMB BALL
+
+		}, {
+			key: 'newBall',
+			value: function newBall() {
+				this.newBall = new _Ball2.default(8, this.width, this.height);
+			}
+		}, {
+			key: 'paddle1',
+			value: function paddle1() {
+				this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.w, _settings.KEYS.s, _settings.KEYS.a, _settings.KEYS.d);
+			}
+		}, {
+			key: 'paddle2',
+			value: function paddle2() {
+				this.paddle2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down, _settings.KEYS.left, _settings.KEYS.right);
+			}
+		}, {
 			key: 'render',
 			value: function render(i) {
 
@@ -550,10 +587,6 @@
 
 				if (this.bomb) {
 					this.newBall.render(svg, this.paddle1, this.paddle2, 1);
-
-					// if (this.newBall.destroy) {
-					// 	return;
-					// }
 				}
 
 				this.paddle1.render(svg);
@@ -581,13 +614,18 @@
 
 	var KEYS = exports.KEYS = {
 	  a: 65,
-	  z: 90,
+	  w: 87,
+	  s: 83,
+	  d: 68,
 	  up: 38,
 	  down: 40,
+	  left: 37,
+	  right: 39,
 	  plus: 187,
 	  minus: 189,
 	  spaceBar: 32,
 	  shiftKey: 16
+
 	};
 
 /***/ },
@@ -713,7 +751,7 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Paddle = function () {
-	    function Paddle(boardHeight, width, height, x, y, up, down) {
+	    function Paddle(boardHeight, width, height, x, y, up, down, left, right) {
 	        var _this = this;
 
 	        _classCallCheck(this, Paddle);
@@ -734,6 +772,12 @@
 	                case down:
 	                    _this.down();
 	                    break;
+	                case right:
+	                    _this.right();
+	                    break;
+	                case left:
+	                    _this.left();
+	                    break;
 	            }
 	        });
 	    }
@@ -747,6 +791,16 @@
 	        key: 'down',
 	        value: function down() {
 	            this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
+	        }
+	    }, {
+	        key: 'left',
+	        value: function left() {
+	            this.x = Math.min(this.boardHeight * 2, this.x - this.speed);
+	        }
+	    }, {
+	        key: 'right',
+	        value: function right() {
+	            this.x = Math.max(this.x + this.speed, 0);
 	        }
 	    }, {
 	        key: 'coordinates',
@@ -952,8 +1006,6 @@
 	                    _Game2.default.render(1);
 	                }
 	            } else if (leftGoal) {
-	                this.direction = -this.direction;
-	                this.goal(paddle2);
 
 	                if (bomb) {
 	                    this.pang.play();
@@ -974,6 +1026,9 @@
 
 	                    _Game2.default.render(1);
 	                }
+
+	                this.direction = -this.direction;
+	                this.goal(paddle2);
 	            }
 	        }
 	    }]);

@@ -1,5 +1,4 @@
 import { SVG_NS } from '../settings';
-import Game from './Game';
 
 
 export default class Ball {
@@ -141,11 +140,9 @@ export default class Ball {
                 gg.innerHTML = 'PLAYER 2 WINS!';
                 svg.appendChild(gg);
 
-                Game.render(1);
+                paddle2.score +=5;
             }
         } else if (leftGoal) {
-            this.direction = -this.direction;
-            this.goal(paddle2);
 
             if (bomb) {
                 this.pang.play()
@@ -164,8 +161,12 @@ export default class Ball {
                 gg.innerHTML = 'PLAYER 1 WINS!';
                 svg.appendChild(gg);
 
-                Game.render(1);
+                paddle1.score +=5;
+                
             }
+
+            this.direction = -this.direction;
+            this.goal(paddle2);
         }
     }
 }

@@ -22,33 +22,16 @@ export default class Game {
 		this.paddleWidth = 12;
 		this.paddleHeight = 56;
 
-
-
 		this.board = new Board(this.width, this.height);
 
+		this.paddle2();
+		this.paddle1();
 
-		this.paddle1 = new Paddle(this.height,
-			this.paddleWidth,
-			this.paddleHeight,
-			this.boardGap,
-			((this.height - this.paddleHeight) / 2),
-			KEYS.a,
-			KEYS.z);
-
-		this.paddle2 = new Paddle(this.height,
-			this.paddleWidth,
-			this.paddleHeight,
-			(this.width - this.boardGap - this.paddleWidth),
-			((this.height - this.paddleHeight) / 2),
-			KEYS.up,
-			KEYS.down);
-
-		this.ball = new Ball(8, this.width, this.height, KEYS.plus, KEYS.minus);
-		this.newBall = new Ball(8, this.width, this.height);
-
-		this.score1 = new Score(this.width / 2 - 70, 30, 30);
-		this.score2 = new Score(this.width / 2 + 50, 30, 30);
-
+		this.ball();
+		this.newBall();
+		
+		this.score1();
+		this.score2();
 
 		document.addEventListener('keydown', event => {
 			switch (event.keyCode) {
@@ -57,10 +40,53 @@ export default class Game {
 					break;
 				case KEYS.shiftKey:
 					this.bomb = true; 
-
 			}
 		});
 	}
+
+	//PLAYER 1
+	score1(){
+		this.score1 = new Score(this.width / 2 - 70, 30, 30);
+	}
+
+	//PLAYER 2
+	score2(){
+		this.score2 = new Score(this.width / 2 + 50, 30, 30);
+	}
+
+	ball(){
+		this.ball = new Ball(8, this.width, this.height, KEYS.plus, KEYS.minus);
+	}
+
+	//BOMB BALL
+	newBall(){
+		this.newBall = new Ball(8, this.width, this.height);
+	}
+
+	paddle1(){
+		this.paddle1 = new Paddle(this.height,
+			this.paddleWidth,
+			this.paddleHeight,
+			this.boardGap,
+			((this.height - this.paddleHeight) / 2),
+			KEYS.w,
+			KEYS.s,
+			KEYS.a,
+			KEYS.d);
+	}
+
+	paddle2(){
+		this.paddle2 = new Paddle(this.height,
+			this.paddleWidth,
+			this.paddleHeight,
+			(this.width - this.boardGap - this.paddleWidth),
+			((this.height - this.paddleHeight) / 2),
+			KEYS.up,
+			KEYS.down,
+			KEYS.left,
+			KEYS.right);
+	}
+
 	render(i) {
 
 		this.gameElement.innerHTML = '';
@@ -99,17 +125,11 @@ export default class Game {
 
 		if (this.bomb) {
 			this.newBall.render(svg, this.paddle1, this.paddle2, 1);
-
-			// if (this.newBall.destroy) {
-			// 	return;
-			// }
 		}
 
 		this.paddle1.render(svg);
 		this.paddle2.render(svg);
 		this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
-
-
 	}
 }

@@ -3,7 +3,7 @@ import {
 } from '../settings'
 
 export default class Paddle {
-    constructor(boardHeight, width, height, x, y, up, down) {
+    constructor(boardHeight, width, height, x, y, up, down, left, right) {
         this.boardHeight = boardHeight;
         this.width = width;
         this.height = height;
@@ -21,6 +21,12 @@ export default class Paddle {
                 case down:
                     this.down();
                     break;
+                case right:
+                    this.right();
+                    break;
+                case left: 
+                    this.left();
+                    break;
             }
         });
     }
@@ -32,6 +38,14 @@ export default class Paddle {
     down() {
         this.y = Math.min(this.y + this.speed, (this.boardHeight - this.height));
     }
+
+    left() {
+       this.x = Math.min(this.boardHeight * 2, this.x - this.speed);
+   }
+
+   right() {
+       this.x = Math.max(this.x + this.speed, 0)
+   }
 
     coordinates(x, y, width, height) {
         let leftX = x;
