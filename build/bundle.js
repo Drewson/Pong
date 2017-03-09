@@ -524,6 +524,9 @@
 			value: function score2() {
 				this.score2 = new _Score2.default(this.width / 2 + 50, 30, 30);
 			}
+
+			//TENNIS BALL
+
 		}, {
 			key: 'ball',
 			value: function ball() {
@@ -537,11 +540,17 @@
 			value: function newBall() {
 				this.newBall = new _Ball2.default(8, this.width, this.height);
 			}
+
+			//PLAYER 1
+
 		}, {
 			key: 'paddle1',
 			value: function paddle1() {
 				this.paddle1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.w, _settings.KEYS.s, _settings.KEYS.a, _settings.KEYS.d);
 			}
+
+			//PLAYER 2
+
 		}, {
 			key: 'paddle2',
 			value: function paddle2() {
@@ -848,12 +857,6 @@
 
 	var _settings = __webpack_require__(10);
 
-	var _Game = __webpack_require__(9);
-
-	var _Game2 = _interopRequireDefault(_Game);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Ball = function () {
@@ -874,6 +877,7 @@
 
 	        this.reset();
 
+	        //KEY EVENTS
 	        document.addEventListener('keydown', function (event) {
 	            switch (event.keyCode) {
 	                case plus:
@@ -885,6 +889,9 @@
 	            }
 	        });
 	    }
+
+	    //WHEN THE BALL HITS A WALL
+
 
 	    _createClass(Ball, [{
 	        key: 'wallCollision',
@@ -900,6 +907,9 @@
 	                this.vy = -this.vy;
 	            }
 	        }
+
+	        //WHEN THE BALL HITS A PADDLE
+
 	    }, {
 	        key: 'paddleCollision',
 	        value: function paddleCollision(paddle1, paddle2) {
@@ -932,6 +942,9 @@
 	                }
 	            }
 	        }
+
+	        //RESETS THE BALLS POSITION AFTER SCORE or NEW GAME
+
 	    }, {
 	        key: 'reset',
 	        value: function reset() {
@@ -946,6 +959,9 @@
 
 	            this.vx = this.direction * (this.ballSpeed - Math.abs(this.vy));
 	        }
+
+	        //INCREMENTS SCORE AFTER GOAL..
+
 	    }, {
 	        key: 'goal',
 	        value: function goal(player) {
@@ -986,6 +1002,7 @@
 	                this.direction = -this.direction;
 	                this.goal(paddle1);
 
+	                //IF THIS BALL IS A BOMB, DO THIS
 	                if (bomb) {
 	                    this.pang.play();
 
@@ -1003,10 +1020,11 @@
 	                    gg.innerHTML = 'PLAYER 2 WINS!';
 	                    svg.appendChild(gg);
 
-	                    _Game2.default.render(1);
+	                    paddle2.score += 5;
 	                }
 	            } else if (leftGoal) {
 
+	                //IF THIS BALL IS A BOMB, DO THIS
 	                if (bomb) {
 	                    this.pang.play();
 
@@ -1024,7 +1042,7 @@
 	                    _gg.innerHTML = 'PLAYER 1 WINS!';
 	                    svg.appendChild(_gg);
 
-	                    _Game2.default.render(1);
+	                    paddle1.score += 5;
 	                }
 
 	                this.direction = -this.direction;

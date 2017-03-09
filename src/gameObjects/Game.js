@@ -54,6 +54,7 @@ export default class Game {
 		this.score2 = new Score(this.width / 2 + 50, 30, 30);
 	}
 
+	//TENNIS BALL
 	ball(){
 		this.ball = new Ball(8, this.width, this.height, KEYS.plus, KEYS.minus);
 	}
@@ -63,6 +64,7 @@ export default class Game {
 		this.newBall = new Ball(8, this.width, this.height);
 	}
 
+	//PLAYER 1
 	paddle1(){
 		this.paddle1 = new Paddle(this.height,
 			this.paddleWidth,
@@ -75,6 +77,7 @@ export default class Game {
 			KEYS.d);
 	}
 
+	//PLAYER 2
 	paddle2(){
 		this.paddle2 = new Paddle(this.height,
 			this.paddleWidth,
@@ -114,7 +117,7 @@ export default class Game {
 			gg.innerHTML = 'GAME OVER!';
 			svg.appendChild(gg);
 
-			i = 1;
+			return;
 		}
 
 		if (this.pause || i) {

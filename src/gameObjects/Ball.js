@@ -15,6 +15,7 @@ export default class Ball {
 
         this.reset();
 
+        //KEY EVENTS
         document.addEventListener('keydown', event => {
             switch (event.keyCode) {
                 case plus:
@@ -27,6 +28,7 @@ export default class Ball {
         });
     }
 
+    //WHEN THE BALL HITS A WALL
     wallCollision() {
         const hitLeft = this.x - this.radius <= 0;
         const hitRight = this.x + this.radius >= this.boardWidth;
@@ -40,6 +42,7 @@ export default class Ball {
         }
     }
 
+    //WHEN THE BALL HITS A PADDLE
     paddleCollision(paddle1, paddle2) {
         if (this.vx > 0) {
             //player 2 coords
@@ -71,7 +74,7 @@ export default class Ball {
         }
     }
 
-
+    //RESETS THE BALLS POSITION AFTER SCORE or NEW GAME
     reset() {
         this.x = this.boardWidth / 2;
         this.y = this.boardHeight / 2;
@@ -84,6 +87,8 @@ export default class Ball {
 
         this.vx = this.direction * (this.ballSpeed - Math.abs(this.vy));
     }
+
+    //INCREMENTS SCORE AFTER GOAL..
     goal(player) {
         player.score++;
         this.reset();
@@ -123,6 +128,7 @@ export default class Ball {
             this.direction = -this.direction;
             this.goal(paddle1);
 
+            //IF THIS BALL IS A BOMB, DO THIS
             if (bomb) {
                 this.pang.play()
 
@@ -144,6 +150,7 @@ export default class Ball {
             }
         } else if (leftGoal) {
 
+            //IF THIS BALL IS A BOMB, DO THIS
             if (bomb) {
                 this.pang.play()
 
