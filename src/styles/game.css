@@ -65,8 +65,8 @@ h2 {
 
 #controls :hover ~ ul{
   visibility: visible;
-  height: 70px;
-  width: 330px;
+  height: 80px;
+  width: 400px;
   padding: 10px;
 }
 

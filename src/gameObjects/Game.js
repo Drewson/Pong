@@ -16,6 +16,8 @@ export default class Game {
 		this.height = height;
 		this.pause = false;
 		this.bomb = false;
+		this.leftBomb = 0;
+		this.rightBomb = 0;
 		this.gameElement = document.getElementById(this.element);
 
 		this.boardGap = 10;
@@ -40,6 +42,13 @@ export default class Game {
 					break;
 				case KEYS.shiftKey:
 					this.bomb = true; 
+					break;
+				case KEYS.leftCmnd:
+					this.leftBomb += 1;
+					break;
+				case KEYS.rightCmnd:
+					this.rightBomb += 1;
+					break;
 			}
 		});
 	}
@@ -116,7 +125,7 @@ export default class Game {
 
 			gg.innerHTML = 'GAME OVER!';
 			svg.appendChild(gg);
-
+			this.pause = true;
 			return;
 		}
 
@@ -128,6 +137,14 @@ export default class Game {
 
 		if (this.bomb) {
 			this.newBall.render(svg, this.paddle1, this.paddle2, 1);
+		}
+
+		if (this.rightBomb > 0) {
+			this.newBall.render(svg, this.paddle1, this.paddle2, 2);
+		}
+		
+		if (this.leftBomb > 0) {
+			this.newBall.render(svg, this.paddle1, this.paddle2, 3);
 		}
 
 		this.paddle1.render(svg);

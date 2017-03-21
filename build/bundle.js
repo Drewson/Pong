@@ -585,7 +585,7 @@
 					gg.innerHTML = 'GAME OVER!';
 					svg.appendChild(gg);
 
-					i = 1;
+					return;
 				}
 
 				if (this.pause || i) {

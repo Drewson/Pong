@@ -12,6 +12,7 @@ export const KEYS = {
   plus:187,
   minus:189, 
   spaceBar: 32, 
-  shiftKey: 16
-  
+  shiftKey: 16,
+  leftCmnd: 91,
+  rightCmnd: 93
 }
